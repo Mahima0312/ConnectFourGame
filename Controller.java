@@ -76,11 +76,11 @@ public class Controller  implements Initializable {
 		List<Rectangle> rectangleList= new ArrayList<>();
 		for(int col=0;col<COLUMNS;col++) {
 			Rectangle rectangle = new Rectangle(CIRCLE_DIAMETER, (ROWS + 1) * CIRCLE_DIAMETER);
-			rectangle.setFill(Color.BLUE);
+			rectangle.setFill(Color.TRANSPARENT);
 			rectangle.setTranslateX(col*(CIRCLE_DIAMETER+5)+CIRCLE_DIAMETER/4);
 
-			rectangle.setOnMouseEntered(event->rectangle.setFill(Color.RED));
-			rectangle.setOnMouseExited(event->rectangle.setFill(Color.BLUE));
+			rectangle.setOnMouseEntered(event->rectangle.setFill(Color.valueOf("#eeeeee26")));
+			rectangle.setOnMouseExited(event->rectangle.setFill(Color.TRANSPARENT));
 			rectangleList.add(rectangle);
 		}
 		return  rectangleList;
